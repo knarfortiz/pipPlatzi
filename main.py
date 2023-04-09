@@ -1,16 +1,20 @@
-# This is a sample Python script.
+import matplotlib.pyplot as plt
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+
+def generate_pie_chart():
+    labels = ['A', 'B', 'C']
+    values = [200, 34, 120]
+
+    fig, ax = plt.subplots()
+    ax.pie(values, labels=labels)
+    plt.savefig('pie_chart.png')
+    plt.close()
 
 
 def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    generate_pie_chart()
